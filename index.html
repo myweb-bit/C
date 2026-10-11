@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- HIGH-CONVERTING SEO -->
+    <title id="seoTitle">Grand Haveli Patna | Luxury Banquet Hall & Lawn</title>
+    <meta name="description" id="seoDesc" content="Grand Haveli Patna - Premium AC Banquet Hall and Luxury Open Lawn for Weddings and Grand Celebrations.">
+    <meta name="keywords" content="marriage hall in patna, banquet hall patna, grand haveli patna, wedding lawn bypass road patna">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://grandhavelipatna.com">
+
+    <!-- Social Media Sharing Previews -->
+    <meta property="og:type" content="business.business">
+    <meta property="og:title" id="ogTitle" content="Grand Haveli Patna | Luxury Banquet Hall">
+    <meta property="og:description" id="ogDesc" content="Patna's premier luxury wedding banquet and celebration venue.">
+    <meta property="og:image" id="ogImage" content="https://cdn-icons-png.flaticon.com/512/8074/8074788.png">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-dark: #07070a;
+            --card-glass: rgba(18, 18, 25, 0.75);
+            --gold: #D4AF37;
+            --gold-grad: linear-gradient(135deg, #FDEE94 0%, #D4AF37 50%, #92690E 100%);
+            --gold-glow: rgba(212, 175, 55, 0.35);
+            --border-glass: rgba(212, 175, 55, 0.22);
+            --text-main: #FFFFFF;
+            --text-sub: #A3A3AF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background: var(--bg-dark); color: var(--text-main); overflow-x: hidden; }
+
+        /* PRELOADER */
+        #loader {
+            position: fixed; inset: 0; background: #050508; z-index: 99999;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            transition: opacity 0.6s ease, visibility 0.6s;
+        }
+        #loader.hide { opacity: 0; visibility: hidden; pointer-events: none; }
+        .spin-ring {
+            width: 100px; height: 100px; border-radius: 50%; border: 2px dashed var(--gold);
+            display: flex; align-items: center; justify-content: center;
+            animation: ringRotate 10s linear infinite; box-shadow: 0 0 30px var(--gold-glow);
+        }
+        @keyframes ringRotate { 100% { transform: rotate(360deg); } }
+        .spin-ring img { width: 65px; height: 65px; object-fit: contain; border-radius: 50%; }
+        .loader-title {
+            margin-top: 20px; font-family: 'Cinzel', serif; font-size: 1.25rem;
+            background: var(--gold-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            letter-spacing: 4px; font-weight: 800; text-transform: uppercase;
+        }
+
+        /* NAVBAR */
+        header {
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+            background: rgba(7, 7, 10, 0.92); backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.08); padding: 14px 45px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .brand-link { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-wrap { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border-glass); overflow: hidden; background: #000; display: flex; align-items: center; justify-content: center; }
+        .logo-wrap img { width: 100%; height: 100%; object-fit: contain; }
+        .brand-text { font-family: 'Cinzel', serif; font-size: 1.2rem; color: var(--gold); font-weight: 800; }
+        nav { display: flex; align-items: center; gap: 26px; }
+        nav a { color: var(--text-sub); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: 0.3s; }
+        nav a:hover { color: var(--gold); }
+
+        .btn-gold-royal {
+            background: var(--gold-grad); color: #000; font-weight: 700; font-size: 0.88rem; padding: 11px 26px;
+            border-radius: 50px; border: none; cursor: pointer; text-decoration: none;
+            box-shadow: 0 4px 18px var(--gold-glow); transition: 0.3s ease;
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+        }
+        .btn-gold-royal:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5); }
+
+        @media(max-width: 850px) {
+            header { padding: 12px 18px; }
+            nav a { display: none; }
+            .brand-text { font-size: 1.05rem; }
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 92vh; display: flex; align-items: center; justify-content: center;
+            text-align: center; padding: 140px 20px 70px; position: relative;
+            background: radial-gradient(circle at center, rgba(38, 30, 12, 0.5) 0%, rgba(7, 7, 10, 1) 85%);
+        }
+        .hero-tag {
+            display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--border-glass);
+            padding: 7px 20px; border-radius: 30px; font-size: 0.8rem; color: var(--gold);
+            background: rgba(212,175,55,0.06); margin-bottom: 22px; text-transform: uppercase; letter-spacing: 2px;
+        }
+        .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(2.3rem, 6vw, 4.4rem); font-weight: 900; line-height: 1.15; margin-bottom: 16px; }
+        .hero h1 span { background: var(--gold-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-stars { color: var(--gold); margin-bottom: 16px; font-size: 1.25rem; letter-spacing: 4px; }
+        .hero p { font-size: clamp(1rem, 1.8vw, 1.2rem); color: var(--text-sub); max-width: 820px; margin: 0 auto 32px; line-height: 1.8; }
+        
+        .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+        .btn-outline-gold {
+            background: transparent; border: 1px solid var(--gold); color: var(--gold);
+            padding: 11px 26px; border-radius: 50px; text-decoration: none; font-weight: 600;
+            display: inline-flex; align-items: center; gap: 8px; transition: 0.3s;
+        }
+        .btn-outline-gold:hover { background: rgba(212,175,55,0.1); color: #fff; }
+
+        /* QUICK STATS */
+        .stats-bar {
+            max-width: 1050px; margin: -35px auto 35px; padding: 22px;
+            background: var(--card-glass); backdrop-filter: blur(20px);
+            border: 1px solid var(--border-glass); border-radius: 20px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px; text-align: center; position: relative; z-index: 10;
+        }
+        .stat-item h3 { font-family: 'Cinzel', serif; font-size: 1.7rem; color: var(--gold); margin-bottom: 4px; }
+        .stat-item p { font-size: 0.82rem; color: var(--text-sub); text-transform: uppercase; letter-spacing: 1px; }
+
+        /* SECTIONS COMMON */
+        .section-box { max-width: 1240px; margin: 0 auto; padding: 75px 20px; }
+        .sec-head { text-align: center; margin-bottom: 50px; }
+        .sec-head h3 { font-family: 'Cinzel', serif; font-size: 0.85rem; color: var(--gold); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 10px; }
+        .sec-head h2 { font-family: 'Cinzel', serif; font-size: clamp(1.9rem, 3.5vw, 2.8rem); font-weight: 700; }
+
+        /* FULL NATURAL RATIO CARDS (NO FRAME CUT) */
+        .cards-stream {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            align-items: start;
+        }
+        .dynamic-card {
+            background: var(--card-glass); backdrop-filter: blur(16px); border-radius: 18px;
+            overflow: hidden; border: 1px solid var(--border-glass); display: flex; flex-direction: column;
+            transition: all 0.3s ease;
+        }
+        .dynamic-card:hover { transform: translateY(-6px); border-color: var(--gold); }
+
+        .img-natural-view { width: 100%; overflow: hidden; background: #0c0c10; cursor: pointer; }
+        .img-natural-view img { width: 100%; height: auto; display: block; object-fit: cover; }
+
+        .card-details { padding: 22px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .card-details h4 { font-size: 1.25rem; font-weight: 700; margin-bottom: 8px; font-family: 'Cinzel', serif; color: var(--text-main); }
+        .card-details p { font-size: 0.88rem; color: var(--text-sub); line-height: 1.6; margin-bottom: 16px; }
+        .card-price { font-size: 1.25rem; color: var(--gold); font-weight: 800; margin-bottom: 20px; }
+
+        /* MASONRY GALLERY */
+        .masonry-gallery { column-count: 3; column-gap: 22px; }
+        @media(max-width: 900px) { .masonry-gallery { column-count: 2; } }
+        @media(max-width: 550px) { .masonry-gallery { column-count: 1; } }
+
+        .gallery-item {
+            break-inside: avoid; margin-bottom: 22px; background: var(--card-glass);
+            border-radius: 14px; overflow: hidden; border: 1px solid var(--border-glass);
+        }
+        .gallery-item img { width: 100%; height: auto; display: block; cursor: pointer; }
+        .gallery-item-title { padding: 12px 16px; font-family: 'Cinzel', serif; font-size: 0.98rem; color: var(--gold); text-align: center; }
+
+        .empty-holder {
+            grid-column: 1/-1; text-align: center; padding: 50px 20px;
+            background: rgba(20,20,26,0.3); border-radius: 16px; border: 1px dashed var(--border-glass); color: var(--text-sub);
+        }
+
+        /* LOCATION & CONTACT */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-top: 35px; }
+        @media(max-width: 850px) { .contact-grid { grid-template-columns: 1fr; } }
+        
+        .contact-info-card {
+            background: var(--card-glass); border: 1px solid var(--border-glass);
+            border-radius: 18px; padding: 30px; display: flex; flex-direction: column; gap: 18px;
+        }
+        .info-row { display: flex; align-items: flex-start; gap: 14px; }
+        .info-row i { font-size: 1.3rem; color: var(--gold); margin-top: 3px; }
+        .info-row div h5 { font-size: 0.8rem; color: var(--text-sub); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 3px; }
+        .info-row div p, .info-row div a { font-size: 1rem; color: #fff; text-decoration: none; font-weight: 500; }
+        .info-row div a:hover { color: var(--gold); }
+
+        .social-bar { display: flex; gap: 12px; margin-top: 10px; }
+        .social-circle {
+            width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--border-glass);
+            display: flex; align-items: center; justify-content: center; color: var(--gold);
+            text-decoration: none; font-size: 1.1rem; transition: 0.3s;
+        }
+        .social-circle:hover { background: var(--gold); color: #000; transform: translateY(-2px); }
+
+        .map-frame-box { border-radius: 18px; overflow: hidden; border: 1px solid var(--border-glass); min-height: 360px; }
+        .map-frame-box iframe { width: 100%; height: 100%; min-height: 360px; border: 0; }
+
+        /* FOOTER */
+        footer {
+            background: #030305; padding: 50px 20px 25px; text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.08); margin-top: 70px;
+        }
+        .foot-logo { width: 65px; height: 65px; object-fit: contain; border-radius: 50%; margin-bottom: 15px; border: 1px solid var(--gold); background: #000; }
+        footer h3 { font-family: 'Cinzel', serif; color: var(--gold); font-size: 1.3rem; margin-bottom: 10px; }
+        footer p { color: var(--text-sub); font-size: 0.88rem; line-height: 1.8; }
+
+        /* CHAT BOT FLOATING BUTTON */
+        .chat-btn {
+            position: fixed; bottom: 30px; right: 30px; background: var(--gold-grad);
+            color: #000; width: 60px; height: 60px; border-radius: 50%; display: flex;
+            align-items: center; justify-content: center; font-size: 24px; cursor: pointer;
+            box-shadow: 0 10px 30px var(--gold-glow); z-index: 1000; transition: 0.3s;
+        }
+        .chat-btn:hover { transform: scale(1.08); }
+
+        .chat-drawer {
+            position: fixed; bottom: 100px; right: 30px; width: 380px; height: 520px;
+            background: rgba(14, 14, 18, 0.97); backdrop-filter: blur(25px); border-radius: 20px;
+            border: 1px solid var(--border-glass); box-shadow: 0 30px 70px rgba(0,0,0,0.9);
+            z-index: 999; display: none; flex-direction: column; overflow: hidden;
+        }
+        .chat-drawer.open { display: flex; }
+        .chat-head {
+            background: #08080B; padding: 15px 18px; border-bottom: 1px solid rgba(255,255,255,0.08);
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .chat-head h4 { font-family: 'Cinzel', serif; font-size: 0.95rem; color: var(--gold); font-weight: 700; }
+        .chat-close { cursor: pointer; color: var(--text-sub); font-size: 1.1rem; }
+        .chat-stream { flex: 1; padding: 15px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; }
+        .msg { padding: 10px 14px; border-radius: 12px; font-size: 0.85rem; line-height: 1.5; max-width: 85%; }
+        .msg.bot { background: #1C1C24; color: #fff; align-self: flex-start; }
+        .msg.user { background: var(--gold-grad); color: #000; align-self: flex-end; font-weight: 600; }
+        
+        .chat-input-bar { display: flex; padding: 10px; background: #08080B; border-top: 1px solid rgba(255,255,255,0.08); gap: 8px; }
+        .chat-input-bar input { flex: 1; padding: 10px 16px; border-radius: 30px; background: #14141A; border: 1px solid rgba(255,255,255,0.1); color: #fff; outline: none; }
+        .chat-input-bar button {
+            background: var(--gold-grad); border: none; width: 40px; height: 40px;
+            border-radius: 50%; color: #000; cursor: pointer; display: flex; align-items: center; justify-content: center;
+        }
+        @media(max-width: 440px) { .chat-drawer { width: 92%; right: 4%; } }
+
+        /* LIGHTBOX IMAGE PREVIEW */
+        #imgModal {
+            position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 100000;
+            display: none; align-items: center; justify-content: center; padding: 20px;
+        }
+        #imgModal img { max-width: 95vw; max-height: 92vh; border-radius: 10px; border: 1px solid var(--gold); }
+    </style>
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div id="loader">
+        <div class="spin-ring">
+            <img id="intro-logo" src="https://cdn-icons-png.flaticon.com/512/8074/8074788.png" alt="Logo">
+        </div>
+        <div class="loader-title" id="intro-name">Grand Haveli</div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header>
+        <a href="#" class="brand-link">
+            <div class="logo-wrap">
+                <img id="nav-logo" src="https://cdn-icons-png.flaticon.com/512/8074/8074788.png" alt="Logo">
+            </div>
+            <span class="brand-text" id="nav-brand-text">Grand Haveli Patna</span>
+        </a>
+        <nav>
+            <a href="#zones">Spaces</a>
+            <a href="#services">Packages</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+            <button class="btn-gold-royal" onclick="autoWhatsAppBooking('General Visit Inquiry')">
+                <i class="fa-brands fa-whatsapp"></i> Book Now
+            </button>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-tag" id="hero-tag">Patna's Grandest Celebration Palace</div>
+            <h1 id="hero-h1">Grand Celebrations at <span id="hero-title-span">Grand Haveli</span></h1>
+            <div class="hero-stars" id="hero-stars-show">★★★★★</div>
+            <p id="hero-p">
+                Mall-scale palatial banquet, centrally air-conditioned hall, sprawling open lawn, and massive parking space. Your ultimate destination for royal weddings and grand events.
+            </p>
+            <div class="hero-actions">
+                <button class="btn-gold-royal" style="font-size: 0.95rem; padding: 12px 32px;" onclick="autoWhatsAppBooking('Full Venue Tour Booking')">
+                    <i class="fa-regular fa-calendar-check"></i> Schedule Palace Tour
+                </button>
+                <a href="#contact" class="btn-outline-gold">
+                    <i class="fa-solid fa-location-dot"></i> Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- HIGHLIGHT STATS -->
+    <div class="stats-bar">
+        <div class="stat-item">
+            <h3>1500+</h3>
+            <p>Guest Capacity</p>
+        </div>
+        <div class="stat-item">
+            <h3>35,000+</h3>
+            <p>Sq. Ft. Sprawling Lawn</p>
+        </div>
+        <div class="stat-item">
+            <h3>200+</h3>
+            <p>Vehicles Parking</p>
+        </div>
+        <div class="stat-item">
+            <h3>15+</h3>
+            <p>Luxury AC Rooms</p>
+        </div>
+    </div>
+
+    <!-- 1. DYNAMIC PALACE ZONES -->
+    <section class="section-box" id="zones">
+        <div class="sec-head">
+            <h3>Palace Architecture</h3>
+            <h2>Royal Venues & Spaces</h2>
+        </div>
+        <div class="cards-stream" id="zones-stream">
+            <div class="empty-holder"><p>Spaces will appear once added in Admin Panel.</p></div>
+        </div>
+    </section>
+
+    <!-- 2. DYNAMIC PACKAGES & SERVICES -->
+    <section class="section-box" id="services">
+        <div class="sec-head">
+            <h3>Curated Experiences</h3>
+            <h2>Bespoke Event Packages</h2>
+        </div>
+        <div class="cards-stream" id="services-stream">
+            <div class="empty-holder"><p>Packages will appear once added in Admin Panel.</p></div>
+        </div>
+    </section>
+
+    <!-- 3. DYNAMIC GALLERY -->
+    <section class="section-box" id="gallery">
+        <div class="sec-head">
+            <h3>Visual Grandeur</h3>
+            <h2>Palace Moments & Gallery</h2>
+        </div>
+        <div class="masonry-gallery" id="gallery-stream">
+            <div class="empty-holder"><p>Gallery photos will appear once added in Admin Panel.</p></div>
+        </div>
+    </section>
+
+    <!-- 4. LOCATION & CONTACT -->
+    <section class="section-box" id="contact">
+        <div class="sec-head">
+            <h3>Plan Your Visit</h3>
+            <h2>Reach Grand Haveli</h2>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info-card">
+                <div class="info-row">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <div>
+                        <h5>Location Address</h5>
+                        <p id="card-address">Bypass Rd, near PNB Bank, Bigrahpur, Mithapur, Patna, Bihar 800001</p>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <div>
+                        <h5>Direct Call / Inquiry</h5>
+                        <p><a id="card-phone-link" href="tel:+917903349571"><span id="card-phone">+91 79033 49571</span></a></p>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                    <div>
+                        <h5>Email Support</h5>
+                        <p><a id="card-email-link" href="mailto:info@grandhaveli.com"><span id="card-email">info@grandhaveli.com</span></a></p>
+                    </div>
+                </div>
+
+                <div>
+                    <h5 style="color:var(--text-sub); text-transform:uppercase; letter-spacing:1px; margin-bottom:10px;">Follow Us Online</h5>
+                    <div class="social-bar">
+                        <a id="link-instagram" href="#" target="_blank" class="social-circle" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a id="link-facebook" href="#" target="_blank" class="social-circle" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a id="link-whatsapp" href="#" target="_blank" class="social-circle" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a id="link-gmaps" href="#" target="_blank" class="social-circle" title="Google Maps"><i class="fa-solid fa-location-arrow"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-frame-box">
+                <iframe id="mapFrame" src="https://maps.google.com/maps?q=Bypass%20Rd%2C%20near%20PNB%20Bank%2C%20Bigrahpur%2C%20Mithapur%2C%20Patna&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <img id="foot-logo" class="foot-logo" src="https://cdn-icons-png.flaticon.com/512/8074/8074788.png" alt="Logo">
+        <h3 id="foot-name">GRAND HAVELI PATNA</h3>
+        <p id="foot-address">📍 Bypass Rd, near PNB Bank, Bigrahpur, Mithapur, Patna, Bihar 800001</p>
+        <p style="margin-top: 8px;">
+            📞 Phone: <span id="foot-phone">+91 79033 49571</span> | 
+            ✉️ Email: <span id="foot-email">contact@grandhaveli.com</span>
+        </p>
+        <p style="margin-top: 25px; color:#555; font-size:0.8rem;">
+            © 2026 <span id="foot-copy-name">Grand Haveli Patna</span>. All rights reserved.
+        </p>
+    </footer>
+
+    <!-- AI CHAT CONCIERGE -->
+    <div class="chat-btn" onclick="toggleChat()" title="Ask AI Concierge">✨</div>
+
+    <div class="chat-drawer" id="chatDrawer">
+        <div class="chat-head">
+            <h4 id="chat-title">Haveli AI Concierge</h4>
+            <div class="chat-close" onclick="toggleChat()">✖</div>
+        </div>
+        <div class="chat-stream" id="chatStream">
+            <div class="msg bot">
+                Namaste! 🙏 Main Grand Haveli Patna ka AI Concierge hu. Venue booking, packages, lawn capacity ya pricing ke bare me pooch sakte hain.
+            </div>
+        </div>
+        <div class="chat-input-bar">
+            <input type="text" id="chatInp" placeholder="Poochiye koi bhi sawaal..." onkeypress="handleEnter(event)">
+            <button onclick="sendAIMsg()"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div id="imgModal" onclick="this.style.display='none'">
+        <img id="modalImg" src="" alt="Zoomed view">
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => { document.getElementById('loader').classList.add('hide'); }, 500);
+        });
+
+        function zoomImage(url) {
+            const modal = document.getElementById('imgModal');
+            document.getElementById('modalImg').src = url;
+            modal.style.display = 'flex';
+        }
+
+        // FIREBASE SETUP
+        const firebaseConfig = {
+            apiKey: "AIzaSyB4TpCv-euqVOn7W_7DBPkp0AsXhkJjmk8",
+            authDomain: "photoshutter-423ab.firebaseapp.com",
+            databaseURL: "https://photoshutter-423ab-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "photoshutter-423ab",
+            storageBucket: "photoshutter-423ab.firebasestorage.app",
+            messagingSenderId: "666430892267",
+            appId: "1:666430892267:web:ea1167d5ce6a6bb1b3b6ae"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.database();
+
+        // REAL ANALYTICS TRACKER: Checks session to count unique real visits
+        if (!sessionStorage.getItem('gh_unique_visit')) {
+            db.ref('gh_analytics/total_views').transaction((current) => {
+                return (current || 0) + 1;
+            });
+            sessionStorage.setItem('gh_unique_visit', '1');
+        }
+
+        let hotelConfig = {
+            name: "Grand Haveli Patna",
+            tagline: "Patna's Grandest Celebration Palace",
+            phone: "7903349571",
+            email: "info@grandhaveli.com",
+            address: "Bypass Rd, near PNB Bank, Bigrahpur, Mithapur, Patna, Bihar 800001",
+            rating: "5"
+        };
+
+        let liveServices = [];
+        let liveZones = [];
+
+        // 1. REALTIME FIREBASE SYNC: GENERAL & SOCIAL DATA
+        db.ref('gh_hotel_settings').on('value', (snap) => {
+            if(snap.exists()) {
+                const s = snap.val();
+                hotelConfig = { ...hotelConfig, ...s };
+
+                if(s.name) {
+                    document.getElementById('nav-brand-text').innerText = s.name;
+                    document.getElementById('intro-name').innerText = s.name;
+                    document.getElementById('foot-name').innerText = s.name.toUpperCase();
+                    document.getElementById('foot-copy-name').innerText = s.name;
+                    document.getElementById('chat-title').innerText = s.name + " Concierge";
+                    document.getElementById('hero-title-span').innerText = s.name;
+                    document.getElementById('seoTitle').innerText = `${s.name} | Luxury Banquet Hall & Lawn`;
+                }
+
+                if(s.tagline) {
+                    document.getElementById('hero-tag').innerText = s.tagline;
+                    document.getElementById('seoDesc').content = s.tagline;
+                }
+
+                if(s.description) {
+                    document.getElementById('hero-p').innerText = s.description;
+                }
+
+                if(s.phone) {
+                    document.getElementById('foot-phone').innerText = s.phone;
+                    document.getElementById('card-phone').innerText = s.phone;
+                    document.getElementById('card-phone-link').href = "tel:" + s.phone;
+                    document.getElementById('link-whatsapp').href = `https://wa.me/91${s.phone.replace(/[^0-9]/g, '')}`;
+                }
+
+                if(s.email) {
+                    document.getElementById('foot-email').innerText = s.email;
+                    document.getElementById('card-email').innerText = s.email;
+                    document.getElementById('card-email-link').href = "mailto:" + s.email;
+                }
+
+                if(s.address) {
+                    document.getElementById('foot-address').innerText = "📍 " + s.address;
+                    document.getElementById('card-address').innerText = s.address;
+                }
+
+                if(s.logoUrl) {
+                    document.getElementById('intro-logo').src = s.logoUrl;
+                    document.getElementById('nav-logo').src = s.logoUrl;
+                    document.getElementById('foot-logo').src = s.logoUrl;
+                    document.getElementById('ogImage').content = s.logoUrl;
+                }
+
+                if(s.rating) {
+                    const stars = parseInt(s.rating) || 5;
+                    document.getElementById('hero-stars-show').innerText = '★'.repeat(stars);
+                }
+
+                if(s.instagram) document.getElementById('link-instagram').href = s.instagram;
+                if(s.facebook) document.getElementById('link-facebook').href = s.facebook;
+                if(s.mapsUrl) document.getElementById('link-gmaps').href = s.mapsUrl;
+                if(s.mapsEmbed) document.getElementById('mapFrame').src = s.mapsEmbed;
+            }
+        });
+
+        // 2. REALTIME FIREBASE SYNC: SPACES
+        db.ref('gh_zones').on('value', (snap) => {
+            const container = document.getElementById('zones-stream');
+            container.innerHTML = '';
+            liveZones = [];
+
+            if(snap.exists()) {
+                snap.forEach((child) => {
+                    const z = child.val();
+                    liveZones.push(z);
+                    container.innerHTML += `
+                        <div class="dynamic-card">
+                            <div class="img-natural-view" onclick="zoomImage('${z.imageUrl}')">
+                                <img src="${z.imageUrl}" alt="${z.title}" loading="lazy">
+                            </div>
+                            <div class="card-details">
+                                <div>
+                                    <h4>${z.title}</h4>
+                                    <p>${z.description || 'Exclusive venue space for your grand celebrations.'}</p>
+                                </div>
+                                <button class="btn-gold-royal" onclick="autoWhatsAppBooking('${z.title}')">
+                                    <i class="fa-brands fa-whatsapp"></i> Book This Space
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                });
+            } else {
+                container.innerHTML = `<div class="empty-holder"><p>No spaces added yet. Manage spaces from Admin Panel.</p></div>`;
+            }
+        });
+
+        // 3. REALTIME FIREBASE SYNC: PACKAGES
+        db.ref('gh_services').on('value', (snap) => {
+            const container = document.getElementById('services-stream');
+            container.innerHTML = '';
+            liveServices = [];
+
+            if(snap.exists()) {
+                snap.forEach((child) => {
+                    const s = child.val();
+                    liveServices.push(s);
+                    container.innerHTML += `
+                        <div class="dynamic-card">
+                            <div class="img-natural-view" onclick="zoomImage('${s.imageUrl}')">
+                                <img src="${s.imageUrl}" alt="${s.title}" loading="lazy">
+                            </div>
+                            <div class="card-details">
+                                <div>
+                                    <h4>${s.title}</h4>
+                                    <p>${s.description || 'Complete event and catering solution.'}</p>
+                                    <div class="card-price">${s.price}</div>
+                                </div>
+                                <button class="btn-gold-royal" onclick="autoWhatsAppBooking('${s.title}', '${s.price}')">
+                                    <i class="fa-brands fa-whatsapp"></i> Book Package
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                });
+            } else {
+                container.innerHTML = `<div class="empty-holder"><p>No packages added yet. Manage services from Admin Panel.</p></div>`;
+            }
+        });
+
+        // 4. REALTIME FIREBASE SYNC: GALLERY
+        db.ref('gh_gallery').on('value', (snap) => {
+            const container = document.getElementById('gallery-stream');
+            container.innerHTML = '';
+
+            if(snap.exists()) {
+                snap.forEach((child) => {
+                    const g = child.val();
+                    container.innerHTML += `
+                        <div class="gallery-item">
+                            <img src="${g.imageUrl}" alt="${g.title}" loading="lazy" onclick="zoomImage('${g.imageUrl}')">
+                            <div class="gallery-item-title">${g.title}</div>
+                        </div>
+                    `;
+                });
+            } else {
+                container.innerHTML = `<div class="empty-holder"><p>No moments added yet. Upload from Admin Panel.</p></div>`;
+            }
+        });
+
+        // DIRECT WHATSAPP ACTION
+        function autoWhatsAppBooking(itemTitle, price = "") {
+            let num = hotelConfig.phone.replace(/[^0-9]/g, '');
+            if(!num.startsWith('91') && num.length === 10) num = '91' + num;
+
+            let msg = `Namaste! Mujhe "${hotelConfig.name}" me booking karni hai.`;
+            if(itemTitle && itemTitle !== 'General Visit Inquiry') {
+                msg += `\nRegarding: ${itemTitle}`;
+                if(price) msg += ` (Pricing: ${price})`;
+            }
+            msg += `\nKripya availability batayein.`;
+
+            window.open(`https://wa.me/${num}?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+
+        // GROQ AI REALTIME CHAT CONCIERGE
+        function getGroqKey() {
+            return "gsk_" + atob("M21Ba3pxcVdURTBhUVlsZnc3S29XR2R5YjNGWTFjZ1J4Yk41d1BReE5ZTWJzV1pnUWNwUg==");
+        }
+
+        const chatDrawer = document.getElementById('chatDrawer');
+        const chatStream = document.getElementById('chatStream');
+        let memory = [];
+
+        function toggleChat() { chatDrawer.classList.toggle('open'); }
+        function handleEnter(e) { if(e.key === 'Enter') sendAIMsg(); }
+
+        async function sendAIMsg() {
+            const inp = document.getElementById('chatInp');
+            const userQ = inp.value.trim();
+            if(!userQ) return;
+
+            chatStream.innerHTML += `<div class="msg user">${userQ}</div>`;
+            inp.value = '';
+            chatStream.scrollTop = chatStream.scrollHeight;
+            memory.push({ role: "user", content: userQ });
+
+            const loadId = "load-" + Date.now();
+            chatStream.innerHTML += `<div class="msg bot" id="${loadId}"><i class="fa-solid fa-spinner fa-spin"></i> Concierge is thinking...</div>`;
+            chatStream.scrollTop = chatStream.scrollHeight;
+
+            const servicesText = liveServices.length > 0 
+                ? JSON.stringify(liveServices.map(s => `${s.title}: ${s.price}`))
+                : "AC Banquet Hall, Catering on demand, Stage Decor";
+
+            const zonesText = liveZones.length > 0
+                ? JSON.stringify(liveZones.map(z => `${z.title} (${z.description || ''})`))
+                : "Centrally AC Hall, Open Lawn, Bridal Suites";
+
+            const systemPrompt = `You are the AI Concierge of "${hotelConfig.name}".
+Live Knowledge:
+- Name: ${hotelConfig.name}
+- Tagline: ${hotelConfig.tagline}
+- Address: ${hotelConfig.address}
+- Phone: ${hotelConfig.phone}
+- Email: ${hotelConfig.email}
+- Live Spaces: ${zonesText}
+- Live Services & Pricing: ${servicesText}
+
+Rules:
+1. Always reply in polite and fluent Hinglish or Hindi.
+2. Provide quick, royal and helpful answers based on the live data above.
+3. Recommend booking directly via Book Now button or calling: ${hotelConfig.phone}.`;
+
+            let botReply = "";
+
+            try {
+                const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+                    method: "POST",
+                    headers: {
+                        "Authorization": `Bearer ${getGroqKey()}`,
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        model: "llama-3.1-8b-instant",
+                        messages: [
+                            { role: "system", content: systemPrompt },
+                            ...memory
+                        ]
+                    })
+                });
+
+                const data = await response.json();
+                if(data.choices && data.choices[0] && data.choices[0].message) {
+                    botReply = data.choices[0].message.content;
+                } else {
+                    botReply = `Namaste! Direct inquiry ke liye call karein: 📞 ${hotelConfig.phone}.`;
+                }
+            } catch(err) {
+                botReply = `Direct inquiry ke liye call karein: 📞 ${hotelConfig.phone}.`;
+            }
+
+            const loader = document.getElementById(loadId);
+            if(loader) loader.remove();
+
+            memory.push({ role: "assistant", content: botReply });
+            chatStream.innerHTML += `<div class="msg bot">${botReply}</div>`;
+            chatStream.scrollTop = chatStream.scrollHeight;
+        }
+    </script>
+</body>
+  </html>
